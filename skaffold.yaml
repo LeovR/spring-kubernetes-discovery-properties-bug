@@ -1,0 +1,13 @@
+apiVersion: skaffold/v4beta1
+kind: Config
+metadata:
+  name: demo
+build:
+  artifacts:
+    - image: demo
+      jib:
+        type: maven
+manifests:
+  kustomize:
+    paths:
+      - .
